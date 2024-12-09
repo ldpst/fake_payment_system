@@ -4,8 +4,8 @@ const pool = mysql.createPool({
     connectionLimit: 10,
     host: 'localhost',
     user: 'root',
-    password: 'hihihaha net parolya',
-    database: 'bank_system'
+    password: '7474',
+    database: 'fake_payment_system'
 }).promise();
 
 const mysqlExecute = async (sql, params = []) => {
@@ -33,6 +33,19 @@ class User {
 
     toString() {
         return this.user_id + " " + this.user_name;
+    }
+}
+
+class Registration {
+    static async addUser(user_name) {
+        try {
+            const insertUsersData = await mysqlExecute('INSERT INTO users(user_name) VALUES (?)', [user_name]);
+            let user_id = insertUsersData[0]?.insertId;
+            await mysqlExecute('INSERT INTO user_account(user_id, user_value) VALUES (?, 0)', [user_id]);
+        }
+        catch (err) {
+            console.error(`Произошла ошибка при Registration.addUser(${user_name})`, err.message);
+        }
     }
 }
 
@@ -66,5 +79,5 @@ class Bank {
     const second_user = new User(2);
     await first_user.updateData();
     await second_user.updateData();
-    await Bank.transfer(second_user, first_user, 600);
+
 })();
