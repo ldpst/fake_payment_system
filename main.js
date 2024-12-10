@@ -74,10 +74,3 @@ class Bank {
     }
 }
 
-(async () => {
-    const first_user = new User(3);
-    const second_user = new User(2);
-    await first_user.updateData();
-    await second_user.updateData();
-
-})();
