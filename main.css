@@ -1,0 +1,24 @@
+.create {
+    text-align: center;
+}
+#create_user_name_div {
+    margin: 0 0 0 41.5%;
+    text-align: right;
+    width: 100px;
+    height: 100px;
+}
+form {
+    position: absolute;
+}
+#user_name_enter_btn {
+    margin: 10px 0 0 0;
+}
+#create_transfer_div {
+    margin: 0 0 0 42.5%;
+    text-align: right;
+    width: 100px;
+    height: 100px;
+}
+#transfer_enter_btn {
+    margin: 10px 0 0 0;
+}
