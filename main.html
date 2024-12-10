@@ -2,9 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>FAKE PAYMENT SYSTEM</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-
+<div class="create" id="create_user">
+    <h2>Создание аккаунта</h2>
+    <div id="create_user_name_div">
+        <form>
+            <label for="user_name_first">Имя</label>
+            <input id="user_name_first"><br>
+            <label for="user_name_second">Фамилия</label>
+            <input id="user_name_second"><br>
+            <label for="user_name_third">Отчество</label>
+            <input id="user_name_third"><br>
+            <button id="user_name_enter_btn">Ввод</button>
+        </form>
+    </div>
+</div>
+<div class='create' id="create_transfer">
+    <h2>Создание платежа</h2>
+    <div id="create_transfer_div">
+        <form>
+            <label for="user_name_transfer_from">От id</label>
+            <input id="user_name_transfer_from"><br>
+            <label for="user_name_transfer_to">Для id</label>
+            <input id="user_name_transfer_to"><br>
+            <label for="transfer_value">Сумма</label>
+            <input id="transfer_value"><br>
+            <button id="transfer_enter_btn">Ввод</button>
+        </form>
+    </div>
+</div>
 </body>
 </html>
