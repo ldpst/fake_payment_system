@@ -12,13 +12,15 @@
     <div id="create_user_name_div">
         <form>
             <label for="user_name_first">Имя</label>
-            <input id="user_name_first"><br>
+            <input type="text" id="user_name_first" required /><br>
             <label for="user_name_second">Фамилия</label>
-            <input id="user_name_second"><br>
+            <input type="text" id="user_name_second" required /><br>
             <label for="user_name_third">Отчество</label>
-            <input id="user_name_third"><br>
+            <input type="text" id="user_name_third" required /><br>
             <button id="user_name_enter_btn">Ввод</button>
         </form>
+        <br><br><br><br>
+        <p id="user_name_create_status">Результат</p>
     </div>
 </div>
 <div class='create' id="create_transfer">
@@ -26,13 +28,17 @@
     <div id="create_transfer_div">
         <form>
             <label for="user_name_transfer_from">От id</label>
-            <input id="user_name_transfer_from"><br>
+            <input type="number" id="user_name_transfer_from" required /><br>
             <label for="user_name_transfer_to">Для id</label>
-            <input id="user_name_transfer_to"><br>
+            <input type="number" id="user_name_transfer_to" required /><br>
             <label for="transfer_value">Сумма</label>
-            <input id="transfer_value"><br>
+            <input type="number" id="transfer_value" required /><br>
             <button id="transfer_enter_btn">Ввод</button>
         </form>
+        <p class="transfer_display" id="transfer_user_name_from_display">Выбранное имя</p><br>
+        <p class="transfer_display" id="transfer_user_name_to_display">Выбранное имя</p><br>
+        <br><br>
+        <p class="transfer_display" id="transfer_status">Результат</p>
     </div>
 </div>
 </body>
