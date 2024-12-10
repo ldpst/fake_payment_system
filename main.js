@@ -8,7 +8,7 @@ const pool = mysql.createPool({
     database: 'fake_payment_system'
 }).promise();
 
-const mysqlExecute = async (sql, params = []) => {
+async function mysqlExecute(sql, params = []) {
     try {
         return await pool.execute(sql, params);
     } catch (err) {
@@ -74,3 +74,6 @@ class Bank {
     }
 }
 
+async function updateTransferUserNameEvent(user_id, pId) {
+    document.getElementById(pId).innerHTML = await mysqlExecute('SELECT * FROM users WHERE user_id = ?', [user_id]);
+}
