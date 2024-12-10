@@ -3,22 +3,35 @@
 }
 #create_user_name_div {
     margin: 0 0 0 41.5%;
-    text-align: right;
-    width: 100px;
     height: 100px;
+    text-align: left;
 }
 form {
     position: absolute;
+    text-align: right;
 }
 #user_name_enter_btn {
     margin: 10px 0 0 0;
 }
 #create_transfer_div {
+    position: relative;
     margin: 0 0 0 42.5%;
-    text-align: right;
-    width: 100px;
     height: 100px;
+    text-align: left;
 }
 #transfer_enter_btn {
     margin: 10px 0 0 0;
+}
+
+input:invalid {
+    background-color: rgb(255, 118, 118);
+}
+
+.transfer_display {
+    display: inline;
+    margin-left: 250px;
+}
+#user_name_create_status {
+    display: inline;
+    margin-left: 265px;
 }
